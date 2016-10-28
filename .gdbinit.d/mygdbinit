@@ -1,0 +1,21 @@
+set disassembly-flavor intel
+dir /usr/src/glibc/eglibc-2.19/malloc/:/usr/src/glibc/eglibc-2.19/stdio-common/:/usr/src/glibc/eglibc-2.19/csu/:/usr/src/glibc/eglibc-2.19/elf/:/usr/src/glibc/eglibc-2.19/stdlib/:/usr/src/glibc/eglibc-2.19/libio/
+
+set debug-file-directory /usr/lib/debug
+
+
+#for heap
+python from libheap import *
+
+#for c++
+python sys.path.append("/usr/share/gcc-4.8/python")
+
+
+#turn off
+dashboard history 
+dashboard memory
+dashboard expressions
+
+
+#alias
+alias -a maps = info proc mappings
