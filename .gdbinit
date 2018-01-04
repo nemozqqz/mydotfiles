@@ -1,3 +1,4 @@
+#source /home/vagrant/softwares/pwndbg/gdbinit.py
 python
 
 # GDB dashboard - Modular visual interface for GDB in Python.
@@ -32,7 +33,7 @@ The list of all the available styles can be obtained with (from GDB itself):
     python from pygments.styles import get_all_styles as styles
     python for s in styles(): print(s)
 """,
-                'default': 'vim',
+                'default': 'monokai',
                 'type': str
             },
             # prompt
@@ -85,7 +86,7 @@ which `{pid}` is expanded with the process identifier of the target program.""",
             },
             'divider_label_style_off_secondary': {
                 'doc': 'Label style for empty secondary dividers',
-                'default': '37'
+                'default': '30'
             },
             'divider_label_skip': {
                 'doc': 'Gap between the aligning border and the label.',
